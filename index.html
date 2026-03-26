@@ -97,7 +97,8 @@ function randomPiece(){
 }
 
 function rotate(p){
-  var s=p.shape[0].map(function(_,ci){return p.shape.map(function(ri){return p.shape[ri][ci];}).reverse();});
+  var t=p.shape[0].map(function(_,ci){return p.shape.map(function(row){return row[ci];});});
+  var s=t.map(function(row){return row.reverse();});
   return{shape:s,color:p.color,x:p.x,y:p.y};
 }
 
