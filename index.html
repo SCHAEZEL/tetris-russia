@@ -265,7 +265,7 @@ document.addEventListener('keydown',function(e){
   if(!running&&e.key!=='Enter')return;
   if(e.key==='ArrowLeft'&&!collides(piece,board,-1,0)){piece.x--;draw();}
   else if(e.key==='ArrowRight'&&!collides(piece,board,1,0)){piece.x++;draw();}
-  else if(e.key==='ArrowDown'&&!collides(piece,board,0,1)){piece.y++;score+=1;draw();}
+  else if(e.key==='ArrowDown'&&!collides(piece,board,0,1)){piece.y++;draw();}
   else if(e.key==='ArrowUp'){
     var r=rotate(piece);
     if(!collides(r,board)){piece=r;draw();}
